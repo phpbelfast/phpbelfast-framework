@@ -19,6 +19,9 @@ require __DIR__ . '/config/database.php';
 $app->container->set('postRepo', function(){
    return new \PhpBelfast\Repos\PostRepo();
 });
+$app->container->set('eventRepo', function(){
+    return new \PhpBelfast\Repos\EventRepo();
+});
 
 $app->container->set('urlRepo', function(){
     return new \PhpBelfast\Repos\UrlRepo();

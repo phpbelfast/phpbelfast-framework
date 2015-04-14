@@ -1,0 +1,25 @@
+{% extends "layout.twig" %}
+{% block header %}
+    <h1 class="text-center">Events</h1>
+    <hr/>
+{% endblock %}
+{% block content %}
+    <div class="col-sm-8 col-sm-offset-2">
+    {% for event in events %}
+        <article class="row">
+            <div class="image col-sm-5">
+                <img class="img-responsive" src="{{ event.image }}" alt=""/>
+            </div>
+            <div class="col-sm-7">
+                <h2>
+                    <a href="{{ urlFor("events.item",{'id': event.id}) }}">
+                        {{ event.title }}
+                    </a></h2>
+                <p class="date">{{ event.start_time.diffForHumans() }}</p>
+            </div>
+        </article>
+        <hr/>
+    {% endfor %}
+    </div>
+{% endblock %}
+

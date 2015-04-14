@@ -1,5 +1,7 @@
 {% extends "layout.twig" %}
 {% block header %}
+    <h1 class="text-center">Posts</h1>
+    <hr/>
 
 {% endblock %}
 {% block content %}
@@ -13,8 +15,8 @@
                 <h2>
                     <a href="{{ urlFor("posts.item",{'id': post.id}) }}">
                         {{ post.title }}
-                    </a></h2>
-
+                    </a>
+                </h2>
                 <p class="date">{{ post.created_at.diffForHumans() }}</p>
             </div>
         </article>

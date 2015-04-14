@@ -5,7 +5,7 @@
         "fzaninotto/faker": "1.*",
         "twig/twig": "1.*",
         "twig/extensions": "1.*",
-        "illuminate/database": "4.2.*"
+        "illuminate/database": "*"
     },
     "autoload": {
         "psr-4": {

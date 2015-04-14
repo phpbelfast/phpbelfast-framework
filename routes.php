@@ -15,6 +15,18 @@ $app->group('/posts', function() use ($app){
 
 });
 
+$app->group('/events', function() use ($app){
+
+    $app->get('/','\PhpBelfast\Controllers\EventController:index')
+        ->name('events.index');
+
+    $app->get('/:id','\PhpBelfast\Controllers\EventController:item')
+        ->conditions(['id' => '[0-9]+'])
+        ->name('events.item');
+
+});
+
+
 $app->group('/url', function() use ($app){
 
     $app->get('/', '\PhpBelfast\Controllers\UrlController:index')
