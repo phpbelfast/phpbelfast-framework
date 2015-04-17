@@ -6,10 +6,10 @@ class_alias('Illuminate\Database\Capsule\Manager', 'DB');
 $settings = [
     'mysql' => [
         'driver' => 'mysql',
-        'host' => 'localhost',
+        'host' => '127.0.0.1',
         'database' => $app->config('mode') == 'test' ? 'phpbelfast_test' : 'phpbelfast',
-        'username' => 'root',
-        'password' => 'root',
+        'username' => 'demo',
+        'password' => 'demo',
         'charset' => 'utf8',
         'collation' => 'utf8_general_ci',
         'prefix' => ''

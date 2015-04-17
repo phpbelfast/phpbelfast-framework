@@ -16,7 +16,7 @@ class EventController extends BaseController{
     {
         $event = $this->app->eventRepo->getById($id);
         if (!$event) {
-            $app->pass();
+            $this->app->pass();
         } else {
             $this->view->set('event', $event);
             $this->app->render('events/item.twig');

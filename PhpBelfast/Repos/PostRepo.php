@@ -7,12 +7,12 @@ class PostRepo {
 
     public function getAll()
     {
-        return Post::orderBy('created_at','DESC')->get();
+        return Post::with('author')->orderBy('created_at','DESC')->get();
     }
 
     public function getById($id)
     {
-        $post = Post::find($id);
+        $post = Post::where('id','=',$id)->with(['author'])->first();
         if(empty($post->id)) {
             return false;
         } else {

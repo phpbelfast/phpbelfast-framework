@@ -7,12 +7,12 @@ class EventRepo {
 
     public function getAll()
     {
-        return Event::orderBy('start_time','ASC')->get();
+        return Event::with('author')->orderBy('start_time','ASC')->get();
     }
 
     public function getById($id)
     {
-        $event = Event::find($id);
+        $event = Event::where('id','=',$id)->with(['author'])->first();
         if(empty($event->id)) {
             return false;
         } else {
