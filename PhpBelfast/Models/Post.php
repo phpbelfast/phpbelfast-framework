@@ -2,6 +2,8 @@
 namespace PhpBelfast\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use PhpBelfast\Traits\Authorable;
+use PhpBelfast\Traits\Sluggable;
 
 /**
  * Class Post
@@ -9,9 +11,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Post extends Model {
 
-
-    public function author(){
-        return $this->belongsTo('\PhpBelfast\Models\Author');
-    }
+    use Authorable, Sluggable;
 
 }

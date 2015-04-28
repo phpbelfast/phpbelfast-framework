@@ -15,6 +15,7 @@
                     <a href="{{ urlFor("events.item",{'id': event.id}) }}">
                         {{ event.title }}
                     </a></h2>
+                <p>{{ event.getSlug() }}</p>
                 <p class="author">{{ event.author.name }}</p>
                 <p class="date">{{ event.start_time.diffForHumans() }}</p>
             </div>
