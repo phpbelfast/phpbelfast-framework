@@ -4,7 +4,7 @@ $app->get('/', '\PhpBelfast\Controllers\BaseController:home')
 
 $app->get('/hello/:name', '\PhpBelfast\Controllers\BaseController:hello');
 
-$app->group('/news', function() use ($app){
+$app->group('/posts', function() use ($app){
 
     $app->get('/','\PhpBelfast\Controllers\PostController:index')
         ->name('posts.index');
