@@ -9,7 +9,7 @@ class EventController extends BaseController{
     {
         $events = $this->app->eventRepo->getAll();
         $this->view->set('events', $events);
-        $this->app->render('events/index.twig');
+        $this->app->render('events/index.twig.php');
     }
 
     public function item($id)
@@ -19,7 +19,7 @@ class EventController extends BaseController{
             $this->app->pass();
         } else {
             $this->view->set('event', $event);
-            $this->app->render('events/item.twig');
+            $this->app->render('events/item.twig.php');
         }
     }
 

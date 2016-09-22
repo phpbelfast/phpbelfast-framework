@@ -21,7 +21,7 @@ $settings = [
     ],
 ];
 $capsule = new DB;
-$capsule->addConnection($settings['mysql']);
+$capsule->addConnection($settings['sqlite']);
 $capsule->setFetchMode(PDO::FETCH_OBJ);
 $capsule->setAsGlobal();
 $capsule->bootEloquent();

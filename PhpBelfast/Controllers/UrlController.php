@@ -13,7 +13,7 @@ class UrlController extends BaseController {
 
     public function index()
     {
-        $this->app->render('url/index.twig');
+        $this->app->render('url/index.twig.php');
     }
 
     public function show()
@@ -36,7 +36,7 @@ class UrlController extends BaseController {
 
         }
 
-        $this->app->render('url/show.twig', array(
+        $this->app->render('url/show.twig.php', array(
             'urls' => $urls
         ));
     }
@@ -66,7 +66,7 @@ class UrlController extends BaseController {
 
         // show
 
-        $this->app->render('url/index.twig', array(
+        $this->app->render('url/index.twig.php', array(
            'url' => $url
         ));
     }

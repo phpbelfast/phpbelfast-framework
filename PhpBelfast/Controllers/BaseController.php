@@ -37,7 +37,7 @@ class BaseController {
 
     public function home()
     {
-        $this->app->render('home.twig');
+        $this->app->render('home.twig.php');
     }
 
 } 

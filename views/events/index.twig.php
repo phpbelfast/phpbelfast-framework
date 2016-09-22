@@ -1,4 +1,4 @@
-{% extends "layout.twig" %}
+{% extends "layout.twig.php" %}
 {% block header %}
     <h1 class="text-center">Events</h1>
     <hr/>

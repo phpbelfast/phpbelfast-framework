@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
 </head>
 <body>
 <div class="navbar navbar-inverse" role="navigation">
@@ -47,8 +47,6 @@
         {% endblock %}
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+<script src="/js/app.js"></script>
 </body>
 </html>

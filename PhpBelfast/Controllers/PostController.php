@@ -9,7 +9,7 @@ class PostController extends BaseController{
     {
         $posts = $this->app->postRepo->getAll();
         $this->view->set('posts', $posts);
-        $this->app->render('news/index.twig');
+        $this->app->render('news/index.twig.php');
     }
 
     public function item($id)
@@ -19,7 +19,7 @@ class PostController extends BaseController{
             $this->app->pass();
         } else {
             $this->view->set('post', $post);
-            $this->app->render('news/item.twig');
+            $this->app->render('news/item.twig.php');
         }
     }
 

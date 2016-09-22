@@ -1,4 +1,4 @@
-{% extends 'layout.twig' %}
+{% extends 'layout.twig.php' %}
 
 {% block header %}URL Shortener{% endblock %}
 
